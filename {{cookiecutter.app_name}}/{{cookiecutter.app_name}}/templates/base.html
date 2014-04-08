@@ -23,8 +23,10 @@
     <div class="{% block wrapper_class %}container{% endblock %}">
       
       {# The header is layed out before the content and footer blocks #}
-      <div class="{% block header_class %}head{% endblock %}">
+      <div class="{% block top_class %}top{% endblock %}">
+        {% block top %}
 
+        {% endblock top %}
       </div>
 
       {# This should hold the main, mutable content #}
@@ -40,8 +42,9 @@
 
         {% endblock %}
       </div>
-   
+      
     </div>
+    {% block scripts %} {% endblock %}
   </body>
 </html>
 {% endraw %}
